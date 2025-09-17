@@ -3,10 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Michael's Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Hello, I'm Michael 👋</h1>
-  <p>I build modern websites and apps using JavaScript.</p>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Michael Giovany</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <h2 class="text-4xl font-bold mb-4">Hi, I’m Michael 👋</h2>
+    <p class="text-lg">Freelance Web Developer | JavaScript | React | Node.js</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto px-6 py-16">
+    <h3 class="text-2xl font-bold mb-4">About Me</h3>
+    <p class="mb-4">
+      I’m a passionate web developer with experience in building modern, responsive websites and web apps.
+      I specialize in JavaScript, React, and Node.js. My goal is to help businesses grow with clean, functional digital solutions.
+    </p>
+    <p>Skills: JavaScript, React, Node.js, Express, MongoDB, HTML, CSS, Tailwind</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl font-bold mb-8">Projects</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Project Card -->
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="https://via.placeholder.com/400x200" alt="Project Screenshot" class="rounded mb-4">
+          <h4 class="font-bold text-lg mb-2">Business Landing Page</h4>
+          <p class="mb-2">A responsive landing page built with HTML, CSS, and Tailwind.</p>
+          <a href="#" class="text-blue-600 hover:underline">Live Demo</a> | 
+          <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="https://via.placeholder.com/400x200" alt="Project Screenshot" class="rounded mb-4">
+          <h4 class="font-bold text-lg mb-2">Task Manager App</h4>
+          <p class="mb-2">A CRUD app with React frontend and Node.js backend.</p>
+          <a href="#" class="text-blue-600 hover:underline">Live Demo</a> | 
+          <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-4">
+          <img src="https://via.placeholder.com/400x200" alt="Project Screenshot" class="rounded mb-4">
+          <h4 class="font-bold text-lg mb-2">E-Commerce Store</h4>
+          <p class="mb-2">Simple e-commerce store with product listing and cart.</p>
+          <a href="#" class="text-blue-600 hover:underline">Live Demo</a> | 
+          <a href="#" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto px-6 py-16">
+    <h3 class="text-2xl font-bold mb-4">Contact</h3>
+    <p class="mb-2">📧 Email: <a href="mailto:yourname.dev@gmail.com" class="text-blue-600 hover:underline">yourname.dev@gmail.com</a></p>
+    <p class="mb-2">🌐 Fiverr: <a href="https://www.fiverr.com/yourprofile" class="text-blue-600 hover:underline">fiverr.com/yourprofile</a></p>
+    <p class="mb-2">💻 GitHub: <a href="https://github.com/yourusername" class="text-blue-600 hover:underline">github.com/yourusername</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p>© 2025 Michael Giovany. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
