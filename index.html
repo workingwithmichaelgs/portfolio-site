@@ -9,33 +9,155 @@
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Michael Giovany Setiawan</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
+<!-- Navbar -->
+<header class="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center text-white">
+
+    <!-- Name -->
+    <h1 class="text-2xl font-extrabold tracking-wide hover:text-yellow-300 transition">
+      Michael Giovany Setiawan
+    </h1>
+
+    <!-- Nav -->
+    <nav class="flex space-x-6 text-lg font-medium">
+      <button onclick="toggleAbout()" class="relative group">
+        About
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+      </button>
+
+      <a href="#contact" class="relative group">
+        Contact
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700 text-white py-20">
+  <div class="container mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center">
+
+    <!-- Left: Text Content -->
+    <div class="flex-1 text-center lg:text-left mb-10 lg:mb-0">
+      <h2 class="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+        Hi, I’m <span class="text-yellow-300">Michael 👋</span>
+      </h2>
+      <p class="text-xl lg:text-2xl font-light mb-8">
+        Freelance Web Developer<br>
+        Specializing in <span class="font-semibold">JavaScript, React, and Node.js</span>
+      </p>
+      <a href="#projects"
+        class="inline-block px-8 py-3 bg-yellow-400 text-blue-900 font-semibold rounded-full shadow-lg transform transition hover:scale-105 hover:shadow-2xl">
+        View My Work
+      </a>
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-    <h2 class="text-4xl font-bold mb-4">Hi, I’m Michael 👋</h2>
-    <p class="text-lg">Freelance Web Developer | JavaScript | React | Node.js</p>
-  </section>
+    <!-- Right: Image Placeholder -->
+    <div class="flex-1 flex justify-center lg:justify-end">
+      <div
+        class="w-64 h-64 lg:w-80 lg:h-80 bg-white/20 backdrop-blur-md rounded-full border-4 border-white flex items-center justify-center shadow-2xl animate-bounce-slow">
+        <div
+          class="w-64 h-64 lg:w-80 lg:h-80 bg-white/20 backdrop-blur-md rounded-full border-4 border-white flex items-center justify-center shadow-2xl animate-bounce-slow overflow-hidden">
+          <img src="images/3d4372d9da377f658777126d8af59b421cc4ce95ff3d7b5b162cac2371680f71._SX1080_FMjpg_.jpg" alt="Michael Giovany" class="w-full h-full object-cover rounded-full" />
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="container mx-auto px-6 py-16">
-    <h3 class="text-2xl font-bold mb-4">About Me</h3>
-    <p class="mb-4">
+  <!-- Decorative Shapes -->
+  <div class="absolute top-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+  <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-pulse"></div>
+</section>
+
+<!-- Custom Animation -->
+<style>
+  @keyframes bounce-slow {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 5s infinite;
+  }
+</style>
+
+
+<!-- About Modal -->
+<div id="aboutModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-2xl mx-4 animate-fadeIn">
+
+    <!-- Title -->
+    <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">
+      About Me
+    </h2>
+
+    <!-- Description -->
+    <p class="text-gray-600 mb-6 leading-relaxed text-center">
       I’m a passionate web developer with experience in building modern, responsive websites and web apps.
-      I specialize in JavaScript, React, and Node.js. My goal is to help businesses grow with clean, functional digital solutions.
+      I specialize in <span class="font-semibold text-blue-600">JavaScript, React, and Node.js</span>.
+      My goal is to help businesses grow with clean, functional digital solutions.
     </p>
-    <p>Skills: JavaScript, React, Node.js, Express, MongoDB, HTML, CSS, Tailwind</p>
-  </section>
+
+    <!-- Skills -->
+    <div class="mb-8">
+      <h3 class="text-lg font-semibold text-gray-800 mb-3">Skills</h3>
+      <div class="grid grid-cols-2 gap-3 text-gray-700">
+        <div class="flex items-center space-x-2">
+          <span class="text-blue-500">⚡</span>
+          <span>JavaScript, React, Node.js</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-green-500">🌱</span>
+          <span>Express, MongoDB</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-pink-500">🎨</span>
+          <span>HTML, CSS, Tailwind</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-indigo-500">🚀</span>
+          <span>Git, REST APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Close Button -->
+    <div class="flex justify-center">
+      <button onclick="toggleAbout()"
+        class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow transition-transform transform hover:scale-105">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- about modal style animation -->
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+</style>
+
 
   <!-- Projects Section -->
   <section id="projects" class="bg-gray-50 py-16">
@@ -84,6 +206,12 @@
   <footer class="bg-gray-900 text-white text-center py-4">
     <p>© 2025 Michael Giovany Setiawan. All rights reserved.</p>
   </footer>
+  <!-- Script -->
+   <script>
+    function toggleAbout() {
+      document.getElementById('aboutModal').classList.toggle('hidden');
+    }
+  </script>
 
 </body>
 </html>
